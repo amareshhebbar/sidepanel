@@ -540,20 +540,35 @@ video {
 .mt-4 {
   margin-top: 1rem;
 }
+.mt-8 {
+  margin-top: 2rem;
+}
 .flex {
   display: flex;
 }
 .grid {
   display: grid;
 }
+.hidden {
+  display: none;
+}
 .h-7 {
   height: 1.75rem;
+}
+.h-full {
+  height: 100%;
+}
+.h-2 {
+  height: 0.5rem;
 }
 .min-h-screen {
   min-height: 100vh;
 }
 .w-7 {
   width: 1.75rem;
+}
+.w-2 {
+  width: 0.5rem;
 }
 .max-w-2xl {
   max-width: 42rem;
@@ -564,8 +579,17 @@ video {
 .max-w-xl {
   max-width: 36rem;
 }
+.max-w-md {
+  max-width: 28rem;
+}
 .flex-1 {
   flex: 1 1 0%;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.resize-none {
+  resize: none;
 }
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -573,8 +597,14 @@ video {
 .flex-col {
   flex-direction: column;
 }
+.flex-wrap {
+  flex-wrap: wrap;
+}
 .items-center {
   align-items: center;
+}
+.justify-center {
+  justify-content: center;
 }
 .justify-between {
   justify-content: space-between;
@@ -584,6 +614,9 @@ video {
 }
 .gap-4 {
   gap: 1rem;
+}
+.gap-3 {
+  gap: 0.75rem;
 }
 .rounded-full {
   border-radius: 9999px;
@@ -607,6 +640,14 @@ video {
   --tw-border-opacity: 1;
   border-color: rgb(38 38 45 / var(--tw-border-opacity, 1));
 }
+.border-signal {
+  --tw-border-opacity: 1;
+  border-color: rgb(201 255 58 / var(--tw-border-opacity, 1));
+}
+.border-signal-dim {
+  --tw-border-opacity: 1;
+  border-color: rgb(168 217 46 / var(--tw-border-opacity, 1));
+}
 .bg-base-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(17 17 20 / var(--tw-bg-opacity, 1));
@@ -618,6 +659,9 @@ video {
 .bg-signal {
   --tw-bg-opacity: 1;
   background-color: rgb(201 255 58 / var(--tw-bg-opacity, 1));
+}
+.p-4 {
+  padding: 1rem;
 }
 .p-6 {
   padding: 1.5rem;
@@ -638,6 +682,17 @@ video {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
 }
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.text-center {
+  text-align: center;
+}
 .font-sans {
   font-family: var(--font-sans), system-ui, sans-serif;
 }
@@ -653,12 +708,19 @@ video {
   font-size: 1.125rem;
   line-height: 1.75rem;
 }
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
 }
 .font-semibold {
   font-weight: 600;
+}
+.font-medium {
+  font-weight: 500;
 }
 .uppercase {
   text-transform: uppercase;
@@ -680,13 +742,37 @@ video {
   --tw-text-opacity: 1;
   color: rgb(247 247 249 / var(--tw-text-opacity, 1));
 }
+.text-flag {
+  --tw-text-opacity: 1;
+  color: rgb(255 93 93 / var(--tw-text-opacity, 1));
+}
 .text-signal {
   --tw-text-opacity: 1;
   color: rgb(201 255 58 / var(--tw-text-opacity, 1));
 }
+.text-base-950 {
+  --tw-text-opacity: 1;
+  color: rgb(10 10 12 / var(--tw-text-opacity, 1));
+}
+.text-base-600 {
+  --tw-text-opacity: 1;
+  color: rgb(56 56 63 / var(--tw-text-opacity, 1));
+}
+.underline {
+  text-decoration-line: underline;
+}
 .antialiased {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+.blur {
+  --tw-blur: blur(8px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+.transition-colors {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 :root {
@@ -707,6 +793,50 @@ body {
 ::selection {
   background-color: #c9ff3a;
   color: #0a0a0c;
+}
+
+.placeholder\:text-base-600::-moz-placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(56 56 63 / var(--tw-text-opacity, 1));
+}
+
+.placeholder\:text-base-600::placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(56 56 63 / var(--tw-text-opacity, 1));
+}
+
+.hover\:border-base-600:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(56 56 63 / var(--tw-border-opacity, 1));
+}
+
+.hover\:bg-signal-dim:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(168 217 46 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:text-flag:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 93 93 / var(--tw-text-opacity, 1));
+}
+
+.hover\:text-signal:hover {
+  --tw-text-opacity: 1;
+  color: rgb(201 255 58 / var(--tw-text-opacity, 1));
+}
+
+.focus\:border-signal:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(201 255 58 / var(--tw-border-opacity, 1));
+}
+
+.focus\:outline-none:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.disabled\:opacity-50:disabled {
+  opacity: 0.5;
 }
 
 @media (min-width: 640px) {

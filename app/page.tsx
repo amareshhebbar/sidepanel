@@ -1,4 +1,11 @@
+'use client'
+
+import { useState } from 'react'
+import { JobDescriptionPanel } from '@/components/panels/JobDescriptionPanel'
+
 export default function Home() {
+  const [jobDescription, setJobDescription] = useState('')
+
   return (
     <main className="mx-auto flex min-h-screen max-w-6xl flex-col px-6 py-10">
       <header className="flex items-center justify-between">
@@ -24,12 +31,7 @@ export default function Home() {
       </section>
 
       <section className="mt-16 grid flex-1 grid-cols-1 gap-4 md:grid-cols-2">
-        <div className="flex flex-col rounded-xl2 border border-base-700 bg-base-900 p-6">
-          <span className="text-xs uppercase tracking-widest text-base-400">
-            the role
-          </span>
-          <div className="mt-4 flex-1 rounded-xl border border-dashed border-base-700 bg-base-950" />
-        </div>
+        <JobDescriptionPanel value={jobDescription} onChange={setJobDescription} />
         <div className="flex flex-col rounded-xl2 border border-base-700 bg-base-900 p-6">
           <span className="text-xs uppercase tracking-widest text-base-400">
             your resume
